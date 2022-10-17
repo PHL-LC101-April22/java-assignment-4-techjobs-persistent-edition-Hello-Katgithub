@@ -14,7 +14,6 @@ public class Skill extends AbstractEntity {
 
 
     @ManyToMany(mappedBy="skills")
-//    private String jobs;
     private List<Job> jobs = new ArrayList<>();
 
     //Entity needs an empty constructor remember that

@@ -31,7 +31,7 @@ public class EmployerController {
 
      @GetMapping("add")
     public String displayAddEmployerForm(Model model) {
-         model.addAttribute("title", "Add Employer");
+//         model.addAttribute("title", "Add Employer");
         model.addAttribute(new Employer());
         return "employers/add";
     }
@@ -41,7 +41,7 @@ public class EmployerController {
     public String processAddEmployerForm(@ModelAttribute @Valid Employer newEmployer,
                                     Errors errors, Model model) {
         if (errors.hasErrors()) {
-            model.addAttribute("employers", "Add Employer");
+//            model.addAttribute("employers", "Add Employer");
             return "employers/add";
         }
         employerRepository.save(newEmployer);
